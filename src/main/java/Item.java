@@ -35,7 +35,7 @@ public class Item {
 
 	@Override
 	public String toString() {
-		return name + price + quantity;  
+		return "Item:" + name + " Price " + price + " Quantity " + quantity;  
 	}
 	
 	

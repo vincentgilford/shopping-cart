@@ -46,8 +46,9 @@ public void testToStringMethod() {
 	String check = underTest.toString();
 	
 	assertEquals("Item" + 1.00 + 1,check);
-	
 }
+
+//@Test
 
 
 

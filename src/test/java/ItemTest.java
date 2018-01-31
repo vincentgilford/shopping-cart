@@ -48,7 +48,17 @@ public void testToStringMethod() {
 	assertEquals("Item" + 1.00 + 1,check);
 }
 
-//@Test
+@Test
+public void removeQuantityFromItem() {
+	Item underTest = new Item("Item",1.00,1);
+	underTest.removeQuantityItem(1); 
+	
+	
+	int check = underTest.getQuantity();
+	
+	assertEquals(2,check); 
+	
+}
 
 
 

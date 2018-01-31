@@ -32,6 +32,12 @@ public class ItemApp {
 				int toRemove = input.nextInt(); 
 				userCart.removeItem(toRemove);
 			}
+			
+			if(userOption.equals("3")) {
+				userCart.currentCartOrders();
+			}
+			
+			
 			//cart summary
 			userCart.currentCartOrders();
 			System.out.println("Would you like to continue Yes or No?");

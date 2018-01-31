@@ -37,6 +37,13 @@ public class Item {
 	public String toString() {
 		return "Item:" + name + " Price " + price + " Quantity " + quantity;  
 	}
+
+	public void removeQuantityItem(int amountRemoved) {
+		// TODO Auto-generated method stub
+		quantity -= amountRemoved;  
+	
+	}
+	
 	
 	
 	

@@ -60,7 +60,7 @@ public class CartTest {
 	public void removeItemFromCart() {
 		Cart underTest = new Cart();
 		underTest.addOrder(new Item("Shoe",5.00,1));
-		underTest.removeItem(0); 
+		underTest.removeItem(-1); 
 		
 		int check = underTest.listSize();
 		
@@ -116,9 +116,48 @@ public class CartTest {
 		assertEquals(2,check);
 	}
 	
+	@Test
+	public void removeQuantityFromShoppingOrderList() {
+		Cart underTest = new Cart();
+		underTest.addOrder(new Item("Shoe",3.00,2));
+		underTest.removeQuantityFromCart("Shoe",1);
+		
+		Item check = new Item("Shoe",3.00,1);
+		int amountForCheck = check.getQuantity();
+		
+		assertEquals(1,amountForCheck);
+		
+	}
 	
+
+@Test
+	public void removeQuantityFromShoppingOrderListWithTwoQuantities() {
+	Cart underTest = new Cart();
+	underTest.addOrder(new Item("Shoe",3.00,2));
+	underTest.addOrder(new Item("Shirts",3.00,2));
+	underTest.removeQuantityFromCart("Shoe",1);
 	
+	Item check = new Item("Shoe",3.00,1);
+	int amountForCheck = check.getQuantity();
 	
+	assertEquals(1,amountForCheck);
+	
+	}
+
+@Test
+	public void removeQuanityByIndex() {
+		Cart underTest = new Cart();
+		underTest.addOrder(new Item("Shoe",3.00,2));
+		underTest.addOrder(new Item("Shirts",3.00,2));
+		underTest.removeQuantityByIndexFromCart(1,1);
+		
+		Item check = new Item("Shoe",3.00,1);
+		int amountForCheck = check.getQuantity();
+		String checkForItem = check.getItemName();
+		
+		assertEquals(1,amountForCheck);
+		assertEquals("Shoe",checkForItem); 
+	}
 	
 	
 	

@@ -26,6 +26,7 @@ public class Cart {
 
 	public void removeItem(int toRemove) {
 		// TODO Auto-generated method stub
+		toRemove +=1; 
 		shoppingOrders.remove(toRemove); 
 	}
 
@@ -47,6 +48,26 @@ public class Cart {
 			amountOrdered ++;   
 		}
 		return amountOrdered;
+	}
+
+	public void removeQuantityFromCart(String itemName, int quantity ) {
+		// TODO Auto-generated method stub
+		for (Item order : shoppingOrders) {
+			if(order.getItemName().equals(itemName)) {
+				order.removeQuantityItem(quantity);
+			}			
+		}
+	}
+
+	public void removeQuantityByIndexFromCart(int orderNum, int quantity) {
+		// TODO Auto-generated method stub
+		for(int i = shoppingOrders.size(); i>0; i--) {
+			if( i == orderNum-1) {
+				shoppingOrders.get(i).removeQuantityItem(quantity);
+			}	
+		}
+		
+		
 	}
 	
 	

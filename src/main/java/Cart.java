@@ -3,7 +3,7 @@ import java.util.List;
 
 public class Cart {
 	private List<Item> shoppingOrders = new ArrayList<>();
-
+	
 	public void addOrder(Item order) {
 		// TODO Auto-generated method stub
 		shoppingOrders.add(order);
@@ -62,12 +62,10 @@ public class Cart {
 	public void removeQuantityByIndexFromCart(int orderNum, int quantity) {
 		// TODO Auto-generated method stub
 		for(int i = shoppingOrders.size(); i>0; i--) {
-			if( i == orderNum-1) {
+			if( i == (orderNum-1)) {
 				shoppingOrders.get(i).removeQuantityItem(quantity);
-			}	
+			}	//use backwards iteration when removing from an iterable data structure
 		}
-		
-		
 	}
 	
 	

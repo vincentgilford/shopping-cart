@@ -9,14 +9,14 @@ import org.junit.Test;
 
 public class CartTest {
 	
-//	@Test
-//	public void cartConstructorOrderList() {
-//		Cart underTest = new Cart();
-//		
-//		assertNotNull(underTest); 
-//		
-//	}
-//	
+	@Test
+	public void cartConstructorOrderList() {
+		Cart underTest = new Cart();
+		
+		assertNotNull(underTest); 
+		
+	}
+	
 	@Test
 	public void addOrder() {
 		Cart underTest = new Cart(); 
@@ -41,20 +41,8 @@ public class CartTest {
 		
 	}
 	
-//	@Test
-//	public void currentCartOrders() {
-//		Cart underTest = new Cart();
-//		underTest.addOrder(new Item("Shoe",5.00,1));
-//		
-//		
-//		Item test = new Item("Shoe",5.00,1);
-//		Cart check = underTest.currentCartOrders();
-//		
-//		
-//		assertEquals(test,check);
-//		
-//	}
-//	
+
+	
 	
 	@Test
 	public void removeItemFromCart() {
@@ -159,19 +147,8 @@ public class CartTest {
 		assertEquals("Shoe",checkForItem); 
 	}
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+
+
 	
 	
 	

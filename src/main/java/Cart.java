@@ -18,10 +18,10 @@ public class Cart {
 	
 		for(int i = 0; i<shoppingOrders.size(); i++) {
 			System.out.println("Order #: " + (i+1) + " Item Name: " + shoppingOrders.get(i).getItemName() + " Price: " + shoppingOrders.get(i).getPrice() + " Quantity: " + shoppingOrders.get(i).getQuantity()); 
-//			System.out.println(shoppingOrders.get(i).getItemName()); 
+
 		}
 		
-		//check order #s
+	
 	}
 
 	public void removeItem(int toRemove) {
@@ -69,7 +69,7 @@ public class Cart {
 	}
 	
 	
-	//allow for removal an individual quantity
+	
 	
 	
 	
